@@ -68,26 +68,4 @@ class ProductCollection extends Collection
 
 
 
-    public function toArray(): array
-    {
-        $items = parent::toArray();
-        $result = [];
-        foreach ($items as $item){
-            $productArray = $item->toArray();
-            $discount = 0;
-            if($this->_discountManager != null){
-                $discount =  $this->_discountManager->Calculate($item);
-            }
-
-            $productArray['price']['final']  = ($discount == 0)
-                ?$productArray['price']['original']
-                :(($productArray['price']['original']/100)*$discount);
-
-            $productArray['price']['discount_percentage']  = $discount;
-            $result[] = $productArray;
-        }
-        return $result;
-    }
-
-
 }
