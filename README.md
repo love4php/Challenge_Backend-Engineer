@@ -22,27 +22,26 @@
 ## Install
  Clone from https://github.com/love4php/Challenge_Backend-Engineer.git
 ```bash
-   clone https://github.com/love4php/Challenge_Backend-Engineer.git .
+   git clone https://github.com/love4php/Challenge_Backend-Engineer.git .
 ```
  Run composer install
 ```bash
-   ./composer install
+   composer install
 ```
 
 ## Run API
-- in root directory run  : 
+- In root directory run  : 
 ```bash
 php artisan serve
 ```
 
-- open url [http://127.0.0.1:8000/products] in your browser
+- Open url [http://127.0.0.1:8000/products] in your browser
 
 ## Optional Params
 - Fitler by category : http://127.0.0.1:8000/products?category={category_name}
 - Fitler by price less than : http://127.0.0.1:8000/products?priceLessThan={price}
-- sort product by : http://127.0.0.1:8000/products?sort={property_name}
-  - property_name : sku , category , name , price 
-
+- Sort product by : http://127.0.0.1:8000/products?sort={sku,category,name,price}
+- Pagination : http://127.0.0.1:8000/products?page={1,2,3,...}
 
 ## Testing 
 To run all tests:
