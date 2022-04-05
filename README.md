@@ -29,6 +29,12 @@
    composer install
 ```
 
+## Database
+The Json file is used as a database and is located at the following address :
+```bash
+./storage/app/db.json
+```
+
 ## Run API
 - In root directory run  : 
 ```bash
