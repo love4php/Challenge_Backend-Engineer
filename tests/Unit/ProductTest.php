@@ -21,7 +21,7 @@ class ProductTest extends TestCase
             ->addRule(DiscountByCategory::class)
             ->addRule(DiscountBySKU::class);
         $result = $collection->applyDiscount($discountManager);
-        $this->assertTrue(str_ends_with($result->first()['price']['discount_percentage'], "%"));
+        $this->assertEquals(substr($result->first()['price']['discount_percentage'], -1), "%");
         $this->assertNotEquals(
             $result->first()['price']['final'],
             $result->first()['price']['original'],
