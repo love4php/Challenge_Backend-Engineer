@@ -18,19 +18,20 @@ class ProductCollection extends Collection
     }
 
 
-    public function applyDiscount(DiscountManager $discountManager){
+    public function applyDiscount(DiscountManager $discountManager): ProductCollection
+    {
         return $this->map(function($product) use ($discountManager){
             $productArray = $product->toArray();
-            $discount = 0;
+            $discount = null;
             if($discountManager != null){
                 $discount =  $discountManager->Calculate($product);
             }
 
-            $productArray['price']['final']  = ($discount == 0)
+            $productArray['price']['final']  = ($discount == null)
                 ?$productArray['price']['original']
                 :(($productArray['price']['original']/100)*$discount);
 
-            $productArray['price']['discount_percentage']  = $discount;
+            $productArray['price']['discount_percentage']  = ($discount == null)?null:$discount."%";
             return $productArray;
 
         });
