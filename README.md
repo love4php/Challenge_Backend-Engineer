@@ -20,16 +20,18 @@
 - XML PHP Extension
 
 ## Install
-- Clone from https://github.com/love4php/Challenge_Backend-Engineer_Mytheresa.git
+ Clone from https://github.com/love4php/Challenge_Backend-Engineer_Mytheresa.git
+```bash
   - clone https://github.com/love4php/Challenge_Backend-Engineer_Mytheresa.git .
-- Run composer install
+```
+ Run composer install
 ```bash
    ./composer install
 ```
 
 ## Run API
 - in root directory run  : 
- ```bash
+```bash
 php artisan serve
 ```
 
@@ -44,5 +46,6 @@ php artisan serve
 
 ## Testing 
 To run all tests:
-- php artisan test
-
+ ```bash
+ php artisan test
+```
