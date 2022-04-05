@@ -20,9 +20,9 @@
 - XML PHP Extension
 
 ## Install
- Clone from https://github.com/love4php/Challenge_Backend-Engineer_Mytheresa.git
+ Clone from https://github.com/love4php/Challenge_Backend-Engineer.git
 ```bash
-  - clone https://github.com/love4php/Challenge_Backend-Engineer_Mytheresa.git .
+   clone https://github.com/love4php/Challenge_Backend-Engineer.git .
 ```
  Run composer install
 ```bash
